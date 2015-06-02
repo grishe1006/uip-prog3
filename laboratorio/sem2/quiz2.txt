@@ -1,0 +1,3 @@
+Explique cuales son los modos de progracion en python.
+interactivo: el interprete te analiza linea por linea.
+normal: se anota en un notpad para ejecutarse.
