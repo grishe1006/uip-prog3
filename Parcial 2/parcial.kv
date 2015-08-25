@@ -1,0 +1,56 @@
+<MenuScreen>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'inicio.jpg'
+
+    Label:
+        text:
+            (U'[b][color=#000000]Nombre: [/b]')
+        markup: True
+        font_size: 30      
+        size_hint:(None, None)
+        size:(300, 30)
+        pos_hint:{'center_x': .3 , 'center_y': .8}
+	TextInput:
+		id: nom
+		font_name: 'britanic.ttf'
+		size_hint:(None, None)
+		size: (300, 30)
+        pos_hint:{'center_x': .6,'center_y': .8}
+		
+    
+    Button:
+        text:
+            ('Continuar')
+        size_hint:(None, None)
+        size:(300, 50)
+        pos_hint:{'center_x': .5,'center_y': .20}
+        on_release: 
+            root.manager.current = 'resultado'
+<ResultadoScreen>:       
+	canvas:
+        Color:
+            rgba: 37/255., 39/255., 30/255., 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'images.jpg'
+
+    Label:
+        text: 
+        markup: True
+        font_size: 30      
+        size_hint:(None, None)
+        size:(300, 30)
+        pos_hint:{'center_x': .3 , 'center_y': .8}
+
+	Button:
+        text: ('VOLVER A SU PANTALLA PRINCIPAL')
+        background_color: (0, 0, 255,0)
+        size_hint:(None, None)
+        size:(250, 50)
+        pos_hint:{'center_x': .5,'center_y': .20}
+        on_release: 
+            root.manager.current = 'menu'
